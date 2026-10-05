@@ -1,0 +1,5 @@
+.navbar-nav .nav-link:hover {
+  background-color: #5c3a21 !important; /* Коричневый цвет фона */
+  color: #ffffff !important;           /* Белый цвет текста для читаемости */
+  border-radius: 5px;                  
+}
