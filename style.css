@@ -1,5 +1,231 @@
+h2{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+p{
+  text-align: center;
+  margin-bottom: 20px;
+}
+body{
+  background-color: rgb(241, 229, 206);
+  font-family: georgia;
+}
+.navbar{
+  background-color: rgb(150, 67, 7) !important;
+  position: fixed;
+  top: 0;  left: 0;  width: 100%;  z-index: 1000;
+}
+.navbar-brand img{
+  border-radius: 50%;
+}
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    box-shadow: 0 4px 12px #00000025;
+    transform: translateY(-4px);
+}
+.card-img-top {
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px #00000025;
+    transform: translateY(-4px);
+}
 .navbar-nav .nav-link:hover {
-  background-color: #5c3a21 !important; /* Коричневый цвет фона */
-  color: #ffffff !important;           /* Белый цвет текста для читаемости */
+  background-color: #5c3a21 !important; 
+  color: #ffffff !important;           
   border-radius: 5px;                  
+}
+h2{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+p{
+  text-align: center;
+  margin-bottom: 20px;
+}
+body{
+  background-color: rgb(241, 229, 206);
+  font-family: georgia;
+}
+.navbar{
+  background-color: rgb(150, 67, 7) !important;
+  position: sticky;
+}
+.navbar-brand img{
+  border-radius: 50%;
+}
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    box-shadow: 0 4px 12px #00000025;
+    transform: translateY(-4px);
+}
+.card-img-top {
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px #00000025;
+    transform: translateY(-4px);
+}
+
+.hero-section{
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.books-background{
+  position: absolute;
+  top: -100px;
+  left: -5%;
+  width: 110%;
+  height: 850px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+
+  transform: rotate(-8deg);
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 35%,
+    transparent 100%
+    );
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 35%,
+    transparent 100%
+  );
+}
+.books-column{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+.books-column img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+.books-column:nth-child(even){
+  margin-top: 100px;
+}
+.books-column:nth-child(3n){
+  margin-top: 40px;
+}
+
+.hero-content{
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+  max-width: 900px;
+  padding: 40px 20px;
+}
+.hero-content h1{
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #171717;
+}
+.subtitle{
+  font-size: 20px;
+  color: #212020;
+  margin-bottom: 30px;
+}
+.hero-button{
+  display: inline-block;
+  padding: 17px 55px;
+
+  color: #5c3a21;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+
+  background: linear-gradient(
+    90deg,
+    #ff4d65,
+    #7547ff,
+  );
+
+  border-radius: 40px;
+}
+.popular-books h1{
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .hero { min-height: 600px; }
+  .books-background { width: 150%; left: -25%; gap: 10px; }
+  .books-column:nth-child(n+4) { display: none; }
+  .books-column img { height: 180px; }
+  .hero-content h1 { font-size: 30px; }
+  .subtitle { font-size: 16px; }
+}
+
+h1 {
+color: #2c3e50;
+  }
+  .category-section {
+margin-bottom: 40px;
+  }
+  .category-title {
+font-size: 24px;
+color: #34495e;
+  border-bottom: 2px solid #3498db;
+padding-bottom: 8px;
+margin-bottom: 20px;
+}
+.books-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 20px;
+}
+.book-card {
+background: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+padding: 15px;
+text-align: center;
+transition: transform 0.2s;
+}
+.book-card:hover {
+transform: translateY(-5px);
+}
+.book-card img {
+width: 100%;
+height: 280px;
+object-fit: cover;
+border-radius: 4px;
+margin-bottom: 10px;
+}
+.book-title {
+font-size: 16px;
+font-weight: bold;
+margin: 10px 0 5px;
+}
+.why-we {
+    text-align: center;
+    padding: 40px;
+}
+
+.why-card {
+    display: inline-block;
+    width: 25%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
 }
