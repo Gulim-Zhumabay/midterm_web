@@ -229,3 +229,104 @@ margin: 10px 0 5px;
     background-color: #f2f2f2;
     border-radius: 10px;
 }
+
+
+.plans-table {
+    --bs-table-bg: #ffffff;
+    --bs-table-color: #000000;
+    --bs-table-border-color: #d8c3ad;
+    --bs-table-striped-bg: #f7efe6;
+    --bs-table-striped-color: #000000;
+    --bs-table-hover-bg: #ead8c5;
+    --bs-table-hover-color: #000000;
+    min-width: 400px;
+}
+
+.plans-table thead {
+    --bs-table-bg: #4a2101;
+    --bs-table-color: #fbf7f7;
+}
+
+.plans-table th,
+.plans-table td {
+    padding: 18px 12px;
+}
+
+.plans-table caption {
+    padding-top: 12px;
+    color: #000000;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-control,
+.form-select {
+    padding: 12px;
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #d8c3ad;
+    border-radius: 6px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    color: #000000;
+    border-color: #8b6245;
+    box-shadow: 0 0 0 3px rgba(139, 98, 69, 0.2);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.book-button {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #453122;
+    --bs-btn-border-color: #8b6245;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #6d4932;
+    --bs-btn-hover-border-color: #6d4932;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #6d4932;
+    --bs-btn-active-border-color: #6d4932;
+    --bs-btn-focus-shadow-rgb: 139, 98, 69;
+    padding: 12px 24px;
+    font-weight: bold;
+}
+
+.contact-info {
+    background-color: #b89275;
+    padding: 20px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.contact-info h2 {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.contact-info p {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.contact-info strong {
+    color: #000000;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.site-footer {
+    padding: 20px;
+    border-top: 1px solid #835d34;
+    color: #000000;
+}

@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" width="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="books.html">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="membership.html">Membership</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+        <h1 class="page-title text-center">Contact Us</h1>
+        <p class="page-description text-center">Tell us which books you would like to see in our library or which book caught your interest.<br>
+            Share your requests, suggestions, or feedback — we would love to hear from you!.</p>
+
+        <div class="row g-4">
+            <section class="col-md-4" aria-labelledby="contact-title">
+                <div class="content-card contact-info">
+                    <h2 id="contact-title" class="h4">Contact Information</h2>
+                    <p class="small">Have a question? Get in touch — we are happy to help!</p>
+                    <p><strong>Email:</strong><br>booknest@gmail.com</p>
+                    <p><strong>Location:</strong><br>Astana, Kazakhstan</p>
+                    <p><strong>Working hours:</strong><br>Monday–Friday, 09:00–18:00</p>
+                </div>
+            </section>
+
+            <section class="col-md-8" aria-labelledby="form-title">
+                <div class="content-card">
+                    <form>
+                        <div class="mb-3">
+                            <label for="user-name" class="form-label">User Name</label>
+                            <input type="text" id="user-name" name="userName" class="form-control" placeholder="Enter your name" autocomplete="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email/Gmail</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="name@gmail.com" autocomplete="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="book-name" class="form-label">Name book</label>
+                            <input type="text" id="book-name" name="bookName" class="form-control" placeholder="Enter the book title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here" required></textarea>
+                        </div>
+                        <button type="button" class="btn book-button">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer text-center">
+        <p class="mb-0">&copy; 2026 BookNest. All rights reserved.</p>
+    </footer>
     
 </body>
 </html>

@@ -3,9 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" width="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="books.html">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="membership.html">Membership</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+        <h1 class="page-title text-center">Membership Plans</h1>
+        <p class="page-description text-center">Choose your monthly subscription and discover new books.</p>
+
+        <section class="content-card mb-4" aria-labelledby="plans-title">
+            <h2 id="plans-title" class="h4 mb-3">Compare our plans</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover align-middle text-center plans-table">
+                    <caption>All plans last one month. Prices are in tenge.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Plan</th>
+                            <th scope="col">Books</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Basic</th>
+                            <td>3</td>
+                            <td>1 month</td>
+                            <td>3 000 ₸</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Standard</th>
+                            <td>7</td>
+                            <td>1 month</td>
+                            <td>5 000 ₸</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Premium</th>
+                            <td>Unlimited</td>
+                            <td>1 month</td>
+                            <td>7 500 ₸</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-card" aria-labelledby="subscription-title">
+            <h2 id="subscription-title" class="h4">Choose a subscription</h2>
+            <p class="text-secondary">Choose the plan that suits you and discover your next favorite book!</p>
+            <form>
+                <div class="mb-3">
+                    <label for="plan" class="form-label">Membership plan</label>
+                    <select id="plan" name="plan" class="form-select" required>
+                        <option value="">Select a plan</option>
+                        <option value="Basic — $5 / month">Basic — 3 000 ₸ / month</option>
+                        <option value="Standard — $10 / month">Standard — 5 000 ₸ / month</option>
+                        <option value="Premium — $15 / month">Premium — 7 500 ₸ / month</option>
+                    </select>
+                </div>
+                <button type="button" class="btn book-button">Choose Plan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer text-center">
+        <p class="mb-0">&copy; 2026 BookNest. All rights reserved.</p>
+    </footer>
 </body>
 </html>
