@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Membership</title>
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css">
+</head> 
+<body> <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" >
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" width="50"></a>
+            <a class="navbar-brand" href="index.html"><img src="logo.png" alt="logo" width="50" loading="lazy"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,7 +39,7 @@
                 </form>
             </div>
         </div>
-    </nav>
+    </nav> </header>
     <main class="container py-5">
         <h1 class="page-title text-center">Membership Plans</h1>
         <p class="page-description text-center">Choose your monthly subscription and discover new books.</p>
@@ -48,7 +48,7 @@
             <h2 id="plans-title" class="h4 mb-3">Compare our plans</h2>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-hover align-middle text-center plans-table">
-                    <caption>All plans last one month. Prices are in tenge.</caption>
+                    <caption>All plans last one month.</caption>
                     <thead>
                         <tr>
                             <th scope="col">Plan</th>
@@ -89,9 +89,9 @@
                     <label for="plan" class="form-label">Membership plan</label>
                     <select id="plan" name="plan" class="form-select" required>
                         <option value="">Select a plan</option>
-                        <option value="Basic — $5 / month">Basic — 3 000 ₸ / month</option>
-                        <option value="Standard — $10 / month">Standard — 5 000 ₸ / month</option>
-                        <option value="Premium — $15 / month">Premium — 7 500 ₸ / month</option>
+                        <option value="Basic — 3 000 ₸ / month">Basic — 3 000 ₸ / month</option>
+                        <option value="Standard — 5 000 ₸ / month">Standard — 5 000 ₸ / month</option>
+                        <option value="Premium — 7 500 ₸ / month">Premium — 7 500 ₸ / month</option>
                     </select>
                 </div>
                 <button type="button" class="btn book-button">Choose Plan</button>
@@ -100,7 +100,8 @@
     </main>
 
     <footer class="site-footer text-center">
-        <p class="mb-0">&copy; 2026 BookNest. All rights reserved.</p>
+        <p class="mb-0">&copy; 2026 BookVerse. All rights reserved.</p>
     </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
