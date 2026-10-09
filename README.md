@@ -54,4 +54,4 @@ Every book page has three buttons: read the ebook and listen to the audiobook (l
 - We all worked together to come up with the theme, style, and color scheme for the entire project. We discussed everything together - the selection of books, the choice of colors for the logo, pages, buttons, and even the position of the elements.
 
 ## Published website
-
+[BookVerse] (https://gulim-zhumabay.github.io/midterm_web/)
