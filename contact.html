@@ -8,38 +8,43 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head> 
-<body> <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="logo.png" alt="logo" width="50" loading="lazy"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-light active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="books.html">Books</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="categories.html">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="membership.html">Membership</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+<body> 
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="logo.png" alt="logo" width="50" loading="lazy"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="books.html">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="categories.html">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="membership.html">Membership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-light" href="signin.html">Sign in</a>
+                        <a class="btn btn-light" href="register.html">Sign up</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav> </header>
+        </nav> 
+    </header>
     <main class="container py-5">
         <h1 class="page-title text-center">Contact Us</h1>
         <p class="page-description text-center">Tell us which books you would like to see in our library or which book caught your interest.<br>
@@ -85,6 +90,8 @@
     <footer class="site-footer text-center">
         <p class="mb-0">&copy; 2026 BookVerse. All rights reserved.</p>
     </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
