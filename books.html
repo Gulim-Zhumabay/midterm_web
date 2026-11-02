@@ -33,11 +33,14 @@
                     <li class="nav-item">
                         <a class="nav-link text-light" href="membership.html">Membership</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="gallery.html">Gallery</a>
+                    </li>
                 </ul>
-                <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+                <div class="d-flex gap-2">
+    <a class="btn btn-outline-light" href="signin.html">Sign in</a>
+    <a class="btn btn-light" href="register.html">Sign up</a>
+</div>
             </div>
         </div>
     </nav> 
@@ -46,8 +49,19 @@
     <h2>Books Catalog</h2>
     <p>New books will be added soon!</p>
     <div class="container my-5">
+    <div class="filter-bar mb-4">
+        <input type="search" id="search-input" class="form-control mb-3" placeholder="Search by title or author" aria-label="Search books">
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button type="button" class="btn btn-outline-dark filter-btn active" data-category="all">All</button>
+            <button type="button" class="btn btn-outline-dark filter-btn" data-category="Fiction">Fiction</button>
+            <button type="button" class="btn btn-outline-dark filter-btn" data-category="Business">Business</button>
+            <button type="button" class="btn btn-outline-dark filter-btn" data-category="Detectives">Detectives</button>
+            <button type="button" class="btn btn-outline-dark filter-btn" data-category="Psychology">Psychology</button>
+        </div>
+    </div>
+    <p id="no-results" class="text-center" style="display:none;">No books found. Try another word or category.</p>
     <div class="row">
-        <div class="col-12 col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4 book-item" data-title="The Last Camellia" data-author="Sarah Jio" data-category="Detectives">
             <div class="card h-100">
                 <img src="oblozhki-books/camellia.png" class="card-img-top" alt="Camellia" loading="lazy">
                 <div class="card-body">
@@ -58,7 +72,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4 book-item" data-title="The Human Brain Book" data-author="Rita Carter" data-category="Psychology">
             <div class="card h-100">
                 <img src="oblozhki-books/howbrainiswork.png" class="card-img-top" alt="The Human Brain Book" loading="lazy">
                 <div class="card-body">
@@ -69,7 +83,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4 book-item" data-title="The Great Gatsby" data-author="F. Scott Fitzgerald" data-category="Fiction">
             <div class="card h-100">
                 <img src="oblozhki-books/gatsby.png" class="card-img-top" alt="The Great Gatsby" loading="lazy">
                 <div class="card-body">
@@ -80,7 +94,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4 book-item" data-title="The Whisperer" data-author="Donato Carrisi" data-category="Detectives">
             <div class="card h-100">
                 <img src="oblozhki-books/The Whisperer.jpeg" class="card-img-top" alt="The Whisperer" loading="lazy">
                 <div class="card-body">
@@ -91,7 +105,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4 book-item" data-title="Dark Psychology and Manipulation" data-author="James Scott" data-category="Psychology">
             <div class="card h-100">
                 <img src="oblozhki-books/Dark Psychology and Manipulation.jpeg" class="card-img-top" alt="Dark Psychology and Manipulation" loading="lazy">
                 <div class="card-body">
@@ -102,7 +116,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4 book-item" data-title="Martin Eden" data-author="Jack London" data-category="Fiction">
             <div class="card h-100">
                 <img src="oblozhki-books/Martin Eden.jpeg" class="card-img-top" alt="Martin Eden" loading="lazy">
                 <div class="card-body">
@@ -113,7 +127,7 @@
             </div>
         </div>
 
-         <div class="col-12 col-md-4 mb-4">
+         <div class="col-12 col-md-4 mb-4 book-item" data-title="The Way of the Wolf" data-author="Jordan Belfort" data-category="Business">
             <div class="card h-100">
                 <img src="oblozhki-books/The Way of the Wolf.jpeg" class="card-img-top" alt="The Way of the Wolf" loading="lazy">
                 <div class="card-body">
@@ -124,7 +138,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4 book-item" data-title="The Name of the Rose" data-author="Umberto Eco" data-category="Detectives">
             <div class="card h-100">
                 <img src="oblozhki-books/The Name of the Rose.jpeg" class="card-img-top" alt="The Name of the Rose" loading="lazy">
                 <div class="card-body">
@@ -135,7 +149,7 @@
             </div> 
         </div>
 
-        <div class="col-12 col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4 book-item" data-title="Dieu voyage toujours incognito" data-author="Laurent Gounelle" data-category="Psychology">
             <div class="card h-100">
                 <img src="oblozhki-books/Dieu voyage toujours incognito.jpeg" class="card-img-top" alt="Dieu voyage toujours incognito" loading="lazy">
                 <div class="card-body">
@@ -152,6 +166,8 @@
     <footer class="text-center border-top py-3">
         <p class="mb-0">&copy; 2026 BookVerse. All rights reserved.</p>
     </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
