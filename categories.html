@@ -10,37 +10,40 @@
 </head> 
 <body> 
     <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="logo.png" alt="logo" width="50" loading="lazy"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-light active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="books.html">Books</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="categories.html">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="membership.html">Membership</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="logo.png" alt="logo" width="50" loading="lazy"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="books.html">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="categories.html">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="membership.html">Membership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-light" href="signin.html">Sign in</a>
+                        <a class="btn btn-light" href="register.html">Sign up</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
     <main>
         <section class="category-section">
@@ -138,10 +141,82 @@
                 </div>
             </div>
         </section>
+
+        <section class="reading-list container my-5">
+            <h2 class="category-title">My reading list</h2>
+            <p>Add the books you want to read. The list is saved only in your browser.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+                <button type="button" class="btn book-button" id="add-book-btn">Add book</button>
+                <button type="button" class="btn btn-outline-dark" id="reset-list-btn">Reset list</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover align-middle text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">Add book</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="book-form" novalidate>
+                        <div class="modal-body">
+                            <input type="hidden" id="book-id">
+                            <div class="mb-3">
+                                <label for="book-title" class="form-label">Title</label>
+                                <input type="text" id="book-title" class="form-control">
+                                <div class="invalid-feedback">Please enter the title.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="book-author" class="form-label">Author</label>
+                                <input type="text" id="book-author" class="form-control">
+                                <div class="invalid-feedback">Please enter the author.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="book-category" class="form-label">Category</label>
+                                <select id="book-category" class="form-select">
+                                    <option>Fiction</option>
+                                    <option>Business</option>
+                                    <option>Detectives</option>
+                                    <option>Psychology</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="book-status" class="form-label">Status</label>
+                                <select id="book-status" class="form-select">
+                                    <option>Want to read</option>
+                                    <option>Reading</option>
+                                    <option>Finished</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn book-button">Save book</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="text-center border-top py-3">
         <p class="mb-0">&copy; 2026 BookVerse. All rights reserved.</p>
     </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
