@@ -81,3 +81,4 @@ Endterm project:
 
 ## Published website
 
+https://gulim-zhumabay.github.io/midterm_web/
